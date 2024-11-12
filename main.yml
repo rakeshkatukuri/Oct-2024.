@@ -1,0 +1,17 @@
+#simple text notation
+name: infosys
+#multi line text notation
+aboutus: | AI Cloud 
+#number notation
+employees: 300000
+#boolean notation
+onsiteservices: True
+#list and array
+
+services: ["Cloud", "SAP", "Oracle", "Salesforce", "IOT", "AI"]
+#complex
+contactus:
+  Building: 1234
+  Plotno: 5678
+  City: Warangal
+  State: TG

@@ -1,0 +1,10 @@
+---
+- name: install multiple packages with ansible playbook
+  hosts: web
+  become: true
+  tasks: 
+  - name: install packages
+    yum:
+      name: ["git", "gzip", "tree"]
+      state: installed
+      

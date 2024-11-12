@@ -1,0 +1,16 @@
+---
+- name: install httpd with ansible playbook
+  hosts: all
+  become: true
+  gather_facts: no
+  tasks:
+  - name: install httpd 
+    yum:
+      name: httpd
+      state: installed
+    notify: start service
+  handlers:
+  - name: start service
+    service:
+      name: httpd
+      state: started

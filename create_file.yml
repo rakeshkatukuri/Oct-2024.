@@ -1,0 +1,9 @@
+---
+- name: create file with Ansible playbook
+  hosts: all
+  become: True
+  tasks:
+  - name: create file
+    file:
+      path: /home/Ansadmin/one.txt
+      state: touch

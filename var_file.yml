@@ -1,0 +1,10 @@
+---
+- name: playbook with variable
+  hosts: all
+  become: true
+  vars:
+    user: devopsuser1
+  tasks:
+  - name: create user
+    user: 
+      name: "{{ user }}"

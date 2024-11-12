@@ -1,0 +1,12 @@
+---
+- name: copy file using ansible playbook
+  hosts: all
+  become: True
+  tasks:
+  - name: copy file
+    copy: 
+      src: /opt/ansible/index.html
+      dest: /home/Ansadmin
+      mode: 755
+      owner: testuser
+      

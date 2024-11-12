@@ -1,0 +1,9 @@
+---
+- name:  create files  with ansible playbook
+  hosts: all
+  become: True
+  tasks:
+  - name: create file
+    file:
+      path: /home/Ansadmin/mydir
+      state: directory

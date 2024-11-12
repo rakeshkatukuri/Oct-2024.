@@ -1,0 +1,10 @@
+---
+- name: create user with ansible variable
+  hosts: all
+  become: True
+  vars_files:
+    -  myuser.yml
+  tasks: 
+  - name: create user
+    user:
+      name: "{{ user }}"

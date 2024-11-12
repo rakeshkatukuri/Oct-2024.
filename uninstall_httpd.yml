@@ -1,0 +1,14 @@
+---
+- name: uninstall httpd with ansible playbook
+  hosts: all
+  become: true
+  tasks:
+  - name: stop service
+    service: 
+      name: httpd
+      state: stopped
+  - name: uninstall httpd
+    yum:
+      name: httpd
+      state: removed
+       
